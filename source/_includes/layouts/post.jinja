@@ -1,0 +1,72 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{{  title  }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  {{ components.favicon() }}
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ title }} | Blog | Flutter Bounty Hunters">
+  <meta property="og:description" content="{{ description }}">
+  <meta property="og:image" content="{{ headerImageUrl }}">
+  <meta property="og:url" content="https://blog.flutterbountyhunters.com/{{ url }}">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ title }} | Blog | Flutter Bounty Hunters">
+  <meta name="twitter:description" content="{{ description }}">
+  <meta name="twitter:image" content="{{ headerImageUrl }}">
+  <meta name="twitter:site" content="@FlutterBounties">
+
+  {{ components.bootstrap() }}
+
+  <link href="/styles/prism.css" rel="stylesheet">
+
+  <link href="/styles/post.css" rel="stylesheet">
+
+  {{ components.googleAnalytics() }}
+</head>
+
+<body>
+<main>
+  <header>
+    <div class="app-bar">
+      <a href="/"><img width="48" src="/images/branding/badge_64.png"></a>
+    </div>
+
+    <img src="{{ headerImageUrl }}" class="header-image">
+
+    <span class="brand-name">Blog - Flutter Bounty Hunters</span>
+    <h1>{{ title }}</h1>
+    <span class="publish-date">{{ publishDate | formatDateTime(to = "MMMM dd, yyyy") }}</span>
+
+    {{ components.socialBar() }}
+
+    <div class="author">
+      <div class="author-row">
+        <img src="{{ author.avatarUrl }}" class="avatar">
+        <div class="name-and-role">
+          <span class="name">{{ author.name }}</span>
+          <span class="role">{{ author.role }}</span>
+        </div>
+      </div>
+    </div>
+
+    {% if podcastEpisodeId is defined %}
+    <div class="podcast-player">
+      <iframe class="podcast-player-iframe" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/{{ podcastEpisodeId }}"></iframe>
+    </div>
+    {% endif %}
+  </header>
+  <article>
+    {{ content }}
+  </article>
+
+  {{ components.footer() }}
+
+  <script src="/scripts/prism.js"></script>
+</main>
+</body>
+</html>

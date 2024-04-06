@@ -1,0 +1,173 @@
+html, body {
+  width: 100%;
+  background: #292929;
+}
+
+header {
+  padding-top: 48px;
+  padding-bottom: 48px;
+
+  background: #2F2F2F;
+
+  text-align: center;
+
+  @media (max-width: 599px) {
+    width: 100%;
+  }
+
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 24px;
+
+    width: 164px;
+  }
+
+  .brand-name {
+    display: block;
+    margin-bottom: 12px;
+
+    color: #515151;
+    font-size: 20;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    margin-bottom: 36px;
+
+    color: WHITE;
+    font-size: 48;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
+
+.post-directory {
+  margin: auto;
+  margin-top: 48px;
+  padding: 0;
+
+  max-width: 800px;
+
+  list-style-type: none;
+
+  @media (max-width: 599px) {
+    margin-left: 0;
+    margin-right: 0;
+
+    width: 100%;
+    padding-left: 24px;
+    padding-right: 24px;
+    max-width: auto;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  li > .post-synopsis {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+
+    padding-left: 36px;
+    padding-right: 36px;
+    padding-top: 24px;
+    padding-bottom: 12px;
+
+    border-radius: 4px;
+
+    @media (max-width: 599px) {
+      flex-direction: column;
+
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    img {
+      margin-right: 48px;
+      width: 128px;
+
+      @media (max-width: 599px) {
+        margin-bottom: 24px;
+        margin-right: 0;
+        width: 100%;
+      }
+    }
+
+    .content {
+      flex: auto;
+
+      .title {
+        display: block;
+        margin-bottom: 24px;
+
+        color: WHITE;
+        font-size: 48px;
+        font-weight: bold;
+        line-height: 1.2;
+
+        @media (max-width: 599px) {
+          font-size: 34px;
+        }
+      }
+
+      .description {
+        display: block;
+        margin-bottom: 24px;
+
+        color: #CECECE;
+        font-size: 24px;
+        line-height: 1.6;
+      }
+
+      .publish-date {
+        margin-right: 24px;
+
+        color: #858585;
+        font-size: 16px;
+        font-weight: bold;
+
+        @media (max-width: 599px) {
+          display: block;
+        }
+
+        &.above {
+          display: none;
+          @media (max-width: 599px) {
+            display: block;
+          }
+        }
+
+        &.below {
+          display: block;
+          @media (max-width: 599px) {
+            display: none;
+          }
+        }
+      }
+
+      .permalink {
+        color: #515151;
+        font-size: 20px;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.divider {
+  margin-top: 24px;
+  margin-bottom: 24px;
+
+  width: 100%;
+  height: 1px;
+
+  background: #444444;
+}

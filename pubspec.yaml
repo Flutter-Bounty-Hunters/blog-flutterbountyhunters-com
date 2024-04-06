@@ -1,0 +1,18 @@
+name: flutter_bounty_hunters_blog
+description: Blog for the Flutter Bounty Hunters.
+version: 1.0.0
+publish_to: none
+
+environment:
+  sdk: ^3.0.0
+
+dependencies:
+  static_shock:
+    git:
+      url: https://github.com/Flutter-Bounty-Hunters/static_shock.git
+      path: packages/static_shock
+      ref: 90_add-date-time-format-jinja-filter
+
+dev_dependencies:
+  lints: ^2.0.0
+  test: ^1.21.0

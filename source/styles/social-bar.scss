@@ -1,0 +1,34 @@
+.social {
+  margin: auto;
+  margin-bottom: 48px;
+
+  display: inline-flex;
+  align-items: center;
+  flex-basis: auto;
+
+  i {
+    margin: 24px;
+
+    color: #00B2FF;
+    font-size: 24px;
+
+    @media (max-width: 599px) {
+      font-size: 18px;
+    }
+  }
+
+  a:hover i {
+    color: #22DDFF;
+  }
+
+  .separator {
+    width: 100px;
+    height: 1px;
+
+    background: #444444;
+
+    @media (max-width: 599px) {
+      width: 48px;
+    }
+  }
+}

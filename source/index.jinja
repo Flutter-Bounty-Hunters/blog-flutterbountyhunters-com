@@ -1,0 +1,65 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{{  title  }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  {{ components.favicon() }}
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Blog | Flutter Bounty Hunters">
+  <meta property="og:description" content="Blog for the Flutter Bounty Hunters">
+  <meta property="og:image" content="https://firebasestorage.googleapis.com/v0/b/flutter-bounty-hunters.appspot.com/o/blog%2Fwebpage-header.png?alt=media&token=f1ee27e1-e7d2-4d17-aeef-90b4b915781b">
+  <meta property="og:url" content="https://blog.flutterbountyhunters.com">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Blog | Flutter Bounty Hunters">
+  <meta name="twitter:description" content="Blog for the Flutter Bounty Hunters">
+  <meta name="twitter:image" content="https://firebasestorage.googleapis.com/v0/b/flutter-bounty-hunters.appspot.com/o/blog%2Fwebpage-header.png?alt=media&token=f1ee27e1-e7d2-4d17-aeef-90b4b915781b">
+  <meta name="twitter:site" content="@FlutterBounties">
+
+  {{ components.bootstrap() }}
+
+  <link href="/styles/index.css" rel="stylesheet">
+
+  {{ components.googleAnalytics() }}
+</head>
+
+<body>
+<main>
+  <header>
+    <img src="/images/branding/badge_256.png">
+    <span class="brand-name">Flutter Bounty Hunters</span>
+    <h1>Blog</h1>
+
+    {{ components.socialBar() }}
+  </header>
+  <ol class="post-directory">
+    {% for page in pages.byTag("post", sortBy="publishDate", order="desc") %}
+    <a href="{{ page.data['url'] }}">
+      <li>
+        <div class="post-synopsis">
+          <img class="preview-image" src="{{ page.data['previewImageUrl'] }}">
+
+          <div class="content">
+            <span class="title">{{ page.data['title'] }}</span>
+            <span class="publish-date above">{{ page.data['publishDate'] | formatDateTime(to = "MMMM dd, yyyy") }}</span>
+            <p class="description">{{ page.data['description'] }}</p>
+            <p>
+              <span class="publish-date below">{{ page.data['publishDate'] | formatDateTime(to = "MMMM dd, yyyy") }}</span>
+              <span class="permalink">{{ page.data['url'] }}</span>
+            </p>
+          </div>
+        </div>
+      </li>
+    </a>
+    <div class="divider">&nbsp;</div>
+    {% endfor %}
+  </ol>
+
+  {{ components.footer() }}
+</main>
+</body>
+</html>
