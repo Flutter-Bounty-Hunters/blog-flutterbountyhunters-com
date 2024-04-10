@@ -1,3 +1,6 @@
+<!--
+rss: false
+-->
 <!doctype html>
 
 <html lang="en">
@@ -37,7 +40,7 @@
     {{ components.socialBar() }}
   </header>
   <ol class="post-directory">
-    {% for page in pages.byTag("post", sortBy="publishDate", order="desc") %}
+    {% for page in pages.byTag("post", sortBy="publishDate=desc") %}
     <a href="{{ page.data['url'] }}">
       <li>
         <div class="post-synopsis">
@@ -45,10 +48,14 @@
 
           <div class="content">
             <span class="title">{{ page.data['title'] }}</span>
+            {% if page.data['publishDate'] is defined %}
             <span class="publish-date above">{{ page.data['publishDate'] | formatDateTime(to = "MMMM dd, yyyy") }}</span>
+            {% endif %}
             <p class="description">{{ page.data['description'] }}</p>
             <p>
+              {% if page.data['publishDate'] is defined %}
               <span class="publish-date below">{{ page.data['publishDate'] | formatDateTime(to = "MMMM dd, yyyy") }}</span>
+              {% endif %}
               <span class="permalink">{{ page.data['url'] }}</span>
             </p>
           </div>

@@ -1,3 +1,7 @@
 layout: layouts/post.jinja
 tags: post
 basePath: /
+author:
+  name: Matt Carroll
+  role: Chief
+  avatarUrl: https://secure.gravatar.com/avatar/2b519036dc508c11b0db3463fffbd8ff

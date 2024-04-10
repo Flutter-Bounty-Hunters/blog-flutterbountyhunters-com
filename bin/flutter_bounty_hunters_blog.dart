@@ -13,7 +13,19 @@ Future<void> main(List<String> arguments) async {
     ..plugin(const MarkdownPlugin())
     ..plugin(const JinjaPlugin())
     ..plugin(const PrettyUrlsPlugin())
-    ..plugin(const SassPlugin());
+    ..plugin(const SassPlugin())
+    ..plugin(RssPlugin(
+      site: RssSiteConfiguration(
+        title: "Blog | Flutter Bounty Hunters",
+        description: "The Flutter Bounty Hunters blog.",
+        homePageUrl: "https://blog.flutterbountyhunters.com",
+      ),
+      pageToRssItemMapper: (RssSiteConfiguration config, Page page) {
+        return defaultPageToRssItemMapper(config, page)?.copyWith(
+          author: page.data["author"]?["name"],
+        );
+      },
+    ));
 
   // Generate the static website.
   await staticShock.generateSite();

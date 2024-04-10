@@ -230,6 +230,17 @@ article {
     margin-bottom: 0.5em;
   }
 
+  blockquote {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+
+    padding-left: 1em;
+
+    border-left: 2px solid #44AAFF;
+
+    font-style: italic;
+  }
+
   pre[class*=language-] {
     margin-left: 2em;
     margin-right: 2em;

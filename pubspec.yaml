@@ -11,7 +11,14 @@ dependencies:
     git:
       url: https://github.com/Flutter-Bounty-Hunters/static_shock.git
       path: packages/static_shock
-      ref: 90_add-date-time-format-jinja-filter
+
+  dart_rss: ^3.0.3
+
+#dependency_overrides:
+#  dart_rss:
+#    git:
+#      url: https://github.com/Flutter-Bounty-Hunters/dart-rss.git
+#      ref: 46_serialize-to-xml
 
 dev_dependencies:
   lints: ^2.0.0

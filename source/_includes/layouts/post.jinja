@@ -40,7 +40,9 @@
 
     <span class="brand-name">Blog - Flutter Bounty Hunters</span>
     <h1>{{ title }}</h1>
+    {% if publishDate is defined %}
     <span class="publish-date">{{ publishDate | formatDateTime(to = "MMMM dd, yyyy") }}</span>
+    {% endif %}
 
     {{ components.socialBar() }}
 
