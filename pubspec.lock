@@ -177,6 +177,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.0.0"
+  github:
+    dependency: transitive
+    description:
+      name: github
+      sha256: "57f6ad78591f9638e903409977443093f862d25062a6b582a3c89e4ae44e4814"
+      url: "https://pub.dev"
+    source: hosted
+    version: "9.24.0"
   glob:
     dependency: transitive
     description:
@@ -245,10 +253,10 @@ packages:
     dependency: transitive
     description:
       name: jinja
-      sha256: "7b6fd9b8420e9db923a0852aa43f688b99381f45caee60b3ba8dcc445d5e60b9"
+      sha256: ee379abb8106faec4898d7a8b712f7085474c8d8dea43d06c52def04fbe5aa67
       url: "https://pub.dev"
     source: hosted
-    version: "0.4.2"
+    version: "0.6.0"
   js:
     dependency: transitive
     description:
@@ -405,10 +413,10 @@ packages:
     dependency: transitive
     description:
       name: process
-      sha256: "53fd8db9cec1d37b0574e12f07520d582019cb6c44abf5479a01505099a34a09"
+      sha256: "21e54fd2faf1b5bdd5102afd25012184a6793927648ea81eea80552ac9405b32"
       url: "https://pub.dev"
     source: hosted
-    version: "4.2.4"
+    version: "5.0.2"
   protobuf:
     dependency: transitive
     description:
@@ -429,10 +437,10 @@ packages:
     dependency: transitive
     description:
       name: pub_updater
-      sha256: b06600619c8c219065a548f8f7c192b3e080beff95488ed692780f48f69c0625
+      sha256: "54e8dc865349059ebe7f163d6acce7c89eb958b8047e6d6e80ce93b13d7c9e60"
       url: "https://pub.dev"
     source: hosted
-    version: "0.3.1"
+    version: "0.4.0"
   pubspec_parse:
     dependency: transitive
     description:
@@ -526,10 +534,10 @@ packages:
     description:
       path: "packages/static_shock"
       ref: HEAD
-      resolved-ref: "86d4a0ccc0ac6424a3f22e651b24c4f1a0386319"
+      resolved-ref: fb8f8c699d8d30fa1427524aafce8cbebc530f42
       url: "https://github.com/Flutter-Bounty-Hunters/static_shock.git"
     source: git
-    version: "0.0.3"
+    version: "0.0.4"
   stream_channel:
     dependency: transitive
     description:
@@ -598,10 +606,10 @@ packages:
     dependency: transitive
     description:
       name: textwrap
-      sha256: "342fb85c503a27c68e0dd21f7be35360acf3231f929e0dcb23cc8593d2919c36"
+      sha256: "780b164d83dfed30b475b1310d288145c5e0109193c3c507cf015d38e4adc844"
       url: "https://pub.dev"
     source: hosted
-    version: "1.2.0"
+    version: "2.0.0"
   typed_data:
     dependency: transitive
     description:
