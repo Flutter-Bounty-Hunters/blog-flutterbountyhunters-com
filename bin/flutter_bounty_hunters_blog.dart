@@ -14,6 +14,7 @@ Future<void> main(List<String> arguments) async {
     ..plugin(const JinjaPlugin())
     ..plugin(const PrettyUrlsPlugin())
     ..plugin(const SassPlugin())
+    ..plugin(const DraftingPlugin())
     ..plugin(RssPlugin(
       site: RssSiteConfiguration(
         title: "Blog | Flutter Bounty Hunters",
