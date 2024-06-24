@@ -282,3 +282,70 @@ article {
     }
   }
 }
+
+#sponsorMe {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+
+  padding-left: 48px;
+  padding-right: 48px;
+  padding-bottom: 128px;
+
+  text-align: center;
+
+  .divider {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 72px;
+
+    width: 200px;
+    height: 1px;
+
+    background: rgba(255, 255, 255, 0.03);
+  }
+
+  .avatar {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 12px;
+
+    width: 72px;
+    height: 72px;
+
+    border-radius: 36px;
+  }
+
+  .message {
+    margin-bottom: 24px;
+
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 14px;
+    height: 1.2;
+  }
+
+  .sponsor-button {
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+
+    border-radius: 4px;
+
+    background: rgba(255, 255, 255, 0.5);
+
+    color: BLACK;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    i {
+      margin-right: 4px;
+    }
+
+    &:hover {
+      background: WHITE;
+    }
+  }
+}

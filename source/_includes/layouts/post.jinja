@@ -22,6 +22,9 @@
 
   {{ components.bootstrap() }}
 
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <link href="/styles/prism.css" rel="stylesheet">
 
   <link href="/styles/post.css" rel="stylesheet">
@@ -65,6 +68,13 @@
   <article>
     {{ content }}
   </article>
+
+  <div id="sponsorMe">
+    <div class="divider"></div>
+    <img src="https://avatars.githubusercontent.com/u/7259036?v=4" class="avatar">
+    <div class="message">Did you find this helpful? Would you consider a monthly sponsorship so I can keep building Flutter and Dart tools?</div>
+    <a href="https://github.com/sponsors/matthew-carroll" target="_blank" class="sponsor-button"><i class="fa-brands fa-github"></i> Sponsor Me</a>
+  </div>
 
   {{ components.footer() }}
 
